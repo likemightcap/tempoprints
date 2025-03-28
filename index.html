@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TempoPrints</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body id="home">
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <!-- Image logo -->
+        <a href="#home" class="logo">
+          <img src="assets/images/tempo-logo.png" alt="TempoPrints Logo" class="logo-img" />
+        </a>
+
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <!-- Main nav menu -->
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <ul class="mobile-menu" id="mobileMenu">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Gallery</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section with Image + Contact Form -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Print • Promote • Elevate</h1>
+        <p>Custom postcards, brand design & more</p>
+
+        <!-- Contact Form (Formspree coming later) -->
+        <form class="hero-form" action="#" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </header>
+
+  <!-- About Section -->
+  <main>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About TempoPrints</h2>
+        <p>We help small businesses turn ideas into impact with custom-designed print and promotional materials that work.</p>
+      </div>
+    </section>
+
+    <!-- Projects / Gallery Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="project-grid">
+          <!-- Placeholder images -->
+          <div class="project"><img src="https://via.placeholder.com/400x300" alt="Design 1"><h3>Postcard Example</h3></div>
+          <div class="project"><img src="https://via.placeholder.com/400x300" alt="Design 2"><h3>Logo Concept</h3></div>
+          <div class="project"><img src="https://via.placeholder.com/400x300" alt="Design 3"><h3>Flyer Design</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Footer Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email us at <a href="mailto:mike@tempoprints.com">mike@tempoprints.com</a> or use the form above.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 TempoPrints. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
