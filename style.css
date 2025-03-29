@@ -169,6 +169,19 @@
     cursor: pointer;
     transition: background 0.3s;
   }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
   
   .hero-form button:hover {
     background: #dddddd;
