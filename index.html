@@ -44,23 +44,19 @@
         <h1>Print • Promote • Elevate</h1>
         <p>Custom postcards, brand design & more</p>
 
-        <!-- Contact Form (Formspree coming later) -->
-        <form class="hero-form" action="https://formspree.io/f/meoalkgl" method="POST" onsubmit="return validateForm()">
+        <!-- Contact Form -->
+        <form class="hero-form" action="https://formspree.io/f/meoalkgl" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           
           <input type="email" name="email" placeholder="Your Email Address" required />
           
           <input type="tel" name="phone" placeholder="Your Phone Number" />
           
-          <label class="checkbox-container">
-            <input type="checkbox" id="adInquiry" name="ad_inquiry" />
-            Inquiring about getting an ad spot on a community mailer
-          </label>
-          
-          <textarea id="message" name="message" placeholder="Your Message"></textarea>
+          <textarea name="message" placeholder="Type a message here. If you're inquiring about an ad spot on a community mailer, simply type 'Mailer' here. Thanks!" required></textarea>
           
           <button type="submit">Send</button>
         </form>
+        
         
         
       </div>

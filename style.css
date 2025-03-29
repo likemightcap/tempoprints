@@ -158,6 +158,18 @@
     font-size: 1rem;
   }
   
+  .hero-form textarea {
+    width: 70%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Ensures font matches inputs */
+    resize: vertical;
+  }
+  
+  
   .hero-form button {
     width: 50%;
     padding: 12px;
@@ -169,19 +181,6 @@
     cursor: pointer;
     transition: background 0.3s;
   }
-
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    color: white;
-    font-size: 0.95rem;
-  }
-  
-  .checkbox-container input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
   
   .hero-form button:hover {
     background: #dddddd;
