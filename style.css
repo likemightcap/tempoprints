@@ -186,7 +186,7 @@ body {
   .hero-form button {
     width: 50%;
     padding: 12px;
-    background: #ffe876;
+    background: #ffffff;
     color: #111111;
     font-weight: bold;
     border: none;
@@ -196,7 +196,8 @@ body {
   }
   
   .hero-form button:hover {
-    background: #ffe208;
+    background: #303030;
+    color: #ffffff
   }
   
   /* About Section */
