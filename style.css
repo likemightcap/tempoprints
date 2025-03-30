@@ -142,15 +142,16 @@ body {
     padding: 20px;
   }
   
-  .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 1px;
-  }
 
   .hero-logo {
     max-width: 420px;
-    margin: 20px auto;
+    margin: 1px auto;
     display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1px;
   }
   
   
@@ -185,7 +186,7 @@ body {
   .hero-form button {
     width: 50%;
     padding: 12px;
-    background: #ffffff;
+    background: #ffe876;
     color: #111111;
     font-weight: bold;
     border: none;
@@ -195,7 +196,7 @@ body {
   }
   
   .hero-form button:hover {
-    background: #dddddd;
+    background: #ffe208;
   }
   
   /* About Section */
