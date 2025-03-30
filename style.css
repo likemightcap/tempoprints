@@ -113,7 +113,7 @@
   .hero {
     position: relative;
     height: 100vh;
-    background: url('assetts/images/Tempo-Banner.jpg') no-repeat center center/cover;
+    background: url('assetts/images/Tempo-Hero.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,6 +142,13 @@
     font-size: 2rem;
     margin-bottom: 1px;
   }
+
+  .hero-logo {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+  }
+  
   
   .hero p {
     font-size: 1rem;
