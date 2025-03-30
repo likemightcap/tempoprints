@@ -243,47 +243,6 @@ body {
   }
   
   
-  /* Gallery / Projects */
-  .projects {
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: white;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
-  }
-  
-  .project {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    padding: 20px;
-    transition: transform 0.3s;
-  }
-  
-  .project img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .project h3 {
-    font-size: 1.5rem;
-    color: white;
-  }
-  
-  .project:hover {
-    transform: translateY(-10px);
-  }
-  
   /* Contact Section */
   .contact {
     padding: 100px 0;
