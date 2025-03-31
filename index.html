@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TempoPrints</title>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assetts/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assetts/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assetts/icon/favicon-16x16.png">
+  <link rel="manifest" href="assetts/icon/site.webmanifest">
+  
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
@@ -18,8 +24,8 @@
           <img src="assetts/images/Tempo-Icon-White2.png" alt="TempoPrints Logo" class="logo-img" />
         </a>
 
-        <!-- Hamburger for mobile -->
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <!-- Hamburger for mobile (event listeners in JS) -->
+        <div id="hamburger" class="hamburger">☰</div>
 
         <!-- Main nav menu -->
         <ul class="nav-menu">
@@ -30,58 +36,90 @@
 
       <!-- Mobile dropdown -->
       <ul class="mobile-menu" id="mobileMenu">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Hero Section with Image + Contact Form -->
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-         <!-- Logo Image -->
+        <!-- Logo Image -->
         <img src="assetts/images/Tempo-Logo-White2.png" alt="TempoPrints Logo" class="hero-logo">
         <h1>Create • Print • Promote</h1>
-        <p>Custom postcards, brand design & more</p>
-
-        <!-- Contact Form -->
-        <form class="hero-form" action="https://formspree.io/f/meoalkgl" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          
-          <input type="email" name="email" placeholder="Your Email Address" required />
-          
-          <input type="tel" name="phone" placeholder="Your Phone Number" />
-          
-          <textarea name="message" placeholder="Type a message here. If you're inquiring about an ad spot on a community mailer, simply type 'Mailer' here. Thanks!" required></textarea>
-          
-          <button type="submit">Send</button>
-        </form>
-        
-        
-        
+        <p>Custom postcards, brand design &amp; more</p>
       </div>
     </section>
   </header>
+
+  <!-- Newsletter Banner Section -->
+  <section class="newsletter-banner">
+    <div class="container">
+      <div class="newsletter-image">
+        <img src="assetts/images/Growth-Blueprint.png" alt="Newsletter Image">
+      </div>
+      <div class="newsletter-text">
+        <h2>Free Download: The 6-Step Local Growth Blueprint</h2>
+        <p>Get more leads, more customers, and more repeat business with this short, practical guide made for local service businesses.</p>
+        <p>You’ll also be subscribed to my once-a-month Tempo Print & Design newsletter — packed with local marketing tips, design insights, and exclusive promos.</p>
+        <p>No spam. No fluff. Just real, helpful info.</p>
+        <form class="newsletter-form" action="https://formspree.io/f/xqapdwjb" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <button type="submit">Get the Free Guide</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- About Section -->
   <main>
     <section id="about" class="about">
       <div class="container">
-        <h2>About Tempo Print & Design</h2>
-        
+        <h2>About Tempo Print &amp; Design</h2>
         <div class="profile-container">
-          <img src="assetts/images/Mike-Lino.png" alt="TempoPrints" class="profile-img">
+          <img src="assetts/images/Mike-Lino.png" alt="Photo of Mike Lightcap, owner of Tempo Print &amp; Design" class="profile-img">
         </div>
-    
-        <p>Hey, I’m Mike Lightcap — the guy behind Tempo Print & Design. I help small businesses turn ideas into impact with custom-designed print and promotional materials that actually work. Whether you’re looking to elevate your brand with eye-catching designs or get noticed with marketing that stands out, I’m here to bring your vision to life with strategy, creativity, and a personal touch.</p>
+        <p>
+          Hey, I’m Mike Lightcap — the guy behind Tempo Print &amp; Design. I help small businesses turn ideas into impact with custom-designed print and promotional materials that actually work. Whether you’re looking to elevate your brand with eye-catching designs or get noticed with marketing that stands out, I’m here to bring your vision to life with strategy, creativity, and a personal touch.
+        </p>
       </div>
     </section>
     
-<!-- Contact Footer Section -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Contact</h2>
-        <p>Email me at <a href="mailto:mike@tempoprints.com">mike@tempoprints.com</a> or use the form above.</p>
+        <div class="contact-info">
+          <div class="contact-email">
+            <span class="contact-icon">✉</span>
+            <span class="contact-text">mike@tempoprints.com</span>
+          </div>
+          <div class="contact-phone">
+            <span class="contact-icon">📞</span>
+            <span class="contact-text">856.252.0414</span>
+          </div>
+        </div>
+        <!-- Contact Form (moved from Hero) -->
+        <form class="contact-form" action="https://formspree.io/f/meoalkgl" method="POST">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+          
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="Email Address" required />
+          
+          <label for="contact-phone">Phone Number</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="Your Phone Number" />
+          
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Type your message here..." required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
       </div>
     </section>
   </main>
