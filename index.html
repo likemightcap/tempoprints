@@ -15,31 +15,41 @@
 </head>
 <body id="home">
 
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="nav-container">
-        <!-- Image logo -->
-        <a href="#home" class="logo">
-          <img src="assetts/images/Tempo-Icon-White2.png" alt="TempoPrints Logo" class="logo-img" />
-        </a>
-
-        <!-- Hamburger for mobile (event listeners in JS) -->
-        <div id="hamburger" class="hamburger">☰</div>
-
-        <!-- Main nav menu -->
-        <ul class="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Mobile dropdown -->
-      <ul class="mobile-menu" id="mobileMenu">
+ <!-- Navigation -->
+ <header>
+  <nav>
+    <div class="nav-container">
+      <!-- Image logo -->
+      <a href="#home" class="logo">
+        <img src="assetts/images/Tempo-Icon-White2.png" alt="TempoPrints Logo" class="logo-img" />
+      </a>
+      
+      <!-- Hamburger for mobile (event listeners in JS) -->
+      <div id="hamburger" class="hamburger">☰</div>
+      
+      <!-- Main nav menu -->
+      <ul class="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+      
+      <!-- Contact Icons in nav bar (always visible) -->
+      <div class="nav-contact">
+        <a href="mailto:mike@tempoprints.com">
+          <img class="nav-contact-icon" src="assetts/icons/Email-Icon.png" alt="Email">
+        </a>
+        <a href="tel:8562520414">
+          <img class="nav-contact-icon" src="assetts/icons/Phone-Icon.png" alt="Phone">
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -60,7 +70,7 @@
         <img src="assetts/images/Growth-Blueprint.png" alt="Newsletter Image">
       </div>
       <div class="newsletter-text">
-        <h2>Free Download: The 6-Step Local Growth Blueprint</h2>
+        <h2>Free Download: The 6-Step Local Growth Blueprint - PDF</h2>
         <p>Get more leads, more customers, and more repeat business with this short, practical guide made for local service businesses.</p>
         <p>You’ll also be subscribed to my once-a-month Tempo Print & Design newsletter — packed with local marketing tips, design insights, and exclusive promos.</p>
         <p>No spam. No fluff. Just real, helpful info.</p>
@@ -96,12 +106,16 @@
       <div class="container">
         <div class="contact-info">
           <div class="contact-email">
-            <span class="contact-icon">✉</span>
-            <span class="contact-text">mike@tempoprints.com</span>
+            <a href="mailto:mike@tempoprints.com">
+              <img class="contact-icon" src="assetts/icons/email-icon.png" alt="Email Icon">
+              <span class="contact-text">mike@tempoprints.com</span>
+            </a>
           </div>
           <div class="contact-phone">
-            <span class="contact-icon">📞</span>
-            <span class="contact-text">856.252.0414</span>
+            <a href="tel:8562520414">
+              <img class="contact-icon" src="assetts/icons/phone-icon.png" alt="Phone Icon">
+              <span class="contact-text">856.252.0414</span>
+            </a>
           </div>
         </div>
         <!-- Contact Form (moved from Hero) -->
