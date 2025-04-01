@@ -138,6 +138,7 @@
 
         <script>
           const form = document.getElementById('contactForm');
+          const statusDiv = document.getElementById('formStatus');
         
           form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -158,21 +159,25 @@
                 body: JSON.stringify(formData)
               });
         
-              const statusDiv = document.getElementById('formStatus');
-
-if (res.ok) {
-  statusDiv.textContent = 'Your message was sent successfully!';
-  statusDiv.className = 'form-status success';
-  statusDiv.style.display = 'block';
-  form.reset();
-} else {
-  statusDiv.textContent = 'Oops! Something went wrong.';
-  statusDiv.className = 'form-status error';
-  statusDiv.style.display = 'block';
-}
-
+              if (res.ok) {
+                statusDiv.textContent = 'Your message was sent successfully!';
+                statusDiv.className = 'form-status success';
+                statusDiv.style.display = 'block';
+                form.reset();
+              } else {
+                statusDiv.textContent = 'Oops! Something went wrong.';
+                statusDiv.className = 'form-status error';
+                statusDiv.style.display = 'block';
+              }
+            } catch (err) {
+              console.error(err);
+              statusDiv.textContent = 'Server error. Please try again later.';
+              statusDiv.className = 'form-status error';
+              statusDiv.style.display = 'block';
+            }
           });
         </script>
+        
       </div>
     </section>
   </main>
