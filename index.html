@@ -134,6 +134,8 @@
           
           <button type="submit">Send</button>
         </form>
+        <div id="formStatus" class="form-status" style="display: none;"></div>
+
         <script>
           const form = document.getElementById('contactForm');
         
@@ -156,16 +158,19 @@
                 body: JSON.stringify(formData)
               });
         
-              if (res.ok) {
-                alert('Message sent! ✅');
-                form.reset();
-              } else {
-                alert('Something went wrong. ❌');
-              }
-            } catch (err) {
-              console.error(err);
-              alert('Server error. ❌');
-            }
+              const statusDiv = document.getElementById('formStatus');
+
+if (res.ok) {
+  statusDiv.textContent = 'Your message was sent successfully!';
+  statusDiv.className = 'form-status success';
+  statusDiv.style.display = 'block';
+  form.reset();
+} else {
+  statusDiv.textContent = 'Oops! Something went wrong.';
+  statusDiv.className = 'form-status error';
+  statusDiv.style.display = 'block';
+}
+
           });
         </script>
       </div>
