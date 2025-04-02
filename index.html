@@ -63,29 +63,73 @@
     </section>
   </header>
 
-  <!-- Newsletter Banner Section -->
-  <section class="newsletter-banner">
-    <div class="container">
-      <div class="newsletter-image">
-        <img src="assetts/images/Growth-Blueprint.png" alt="Newsletter Image">
-      </div>
-      <div class="newsletter-text">
-        <h2>Free Download: The 6-Step Local Growth Blueprint - PDF</h2>
-        <p>Get more leads, more customers, and more repeat business with this short, practical guide made for local service businesses.</p>
-        <p>You’ll also be subscribed to my once-a-month Tempo Print & Design newsletter — packed with local marketing tips, design insights, and exclusive promos.</p>
-        <p>No spam. No fluff. Just real, helpful info.</p>
-        <form class="newsletter-form" action="https://formspree.io/f/xqapdwjb" method="POST">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required />
-          </div>
-          <button type="submit">Get the Free Guide</button>
-        </form>
-      </div>
+ <!-- Newsletter Banner Section -->
+<section class="newsletter-banner">
+  <div class="container">
+    <div class="newsletter-image">
+      <img src="assetts/images/Growth-Blueprint.png" alt="Newsletter Image">
     </div>
-  </section>
+    <div class="newsletter-text">
+      <h2>Free Download: The 6-Step Local Growth Blueprint - PDF</h2>
+      <p>Get more leads, more customers, and more repeat business with this short, practical guide made for local service businesses.</p>
+      <p>You’ll also be subscribed to my once-a-month Tempo Print & Design newsletter — packed with local marketing tips, design insights, and exclusive promos.</p>
+      <p>No spam. No fluff. Just real, helpful info.</p>
+
+      <form class="newsletter-form" id="newsletterForm">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <button type="submit">Get the Free Guide</button>
+      </form>
+
+      <div id="newsletterStatus" class="form-status" style="display: none;"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const newsletterForm = document.getElementById('newsletterForm');
+  const newsletterStatus = document.getElementById('newsletterStatus');
+
+  newsletterForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: newsletterForm.name.value,
+      email: newsletterForm.email.value
+    };
+
+    try {
+      const res = await fetch('https://tempo-form-backend.onrender.com/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        newsletterStatus.textContent = 'Thanks! Check your inbox for the guide.';
+        newsletterStatus.className = 'form-status success';
+        newsletterStatus.style.display = 'block';
+        newsletterForm.reset();
+      } else {
+        newsletterStatus.textContent = 'Something went wrong. Please try again.';
+        newsletterStatus.className = 'form-status error';
+        newsletterStatus.style.display = 'block';
+      }
+    } catch (err) {
+      console.error(err);
+      newsletterStatus.textContent = 'Server error. Try again later.';
+      newsletterStatus.className = 'form-status error';
+      newsletterStatus.style.display = 'block';
+    }
+  });
+</script>
+
 
   <!-- About Section -->
   <main>
