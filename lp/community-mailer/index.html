@@ -1,1 +1,63 @@
 TEMP: Community Mailer Landing Page
+
+<form class="mailer-inquiry-form" id="mailer-form">
+  <label for="name">Name*</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="company">Company Name</label>
+  <input type="text" id="company" name="company">
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone">
+
+  <label for="email">Email Address*</label>
+  <input type="email" id="email" name="email" required>
+
+  <button type="submit">Submit</button>
+</form>
+<script>
+  const mailerForm = document.getElementById('mailer-form');
+  const mailerStatus = document.createElement('div');
+  mailerStatus.id = 'mailerStatus';
+  mailerStatus.className = 'form-status';
+  mailerStatus.style.display = 'none';
+  mailerForm.appendChild(mailerStatus);
+
+  mailerForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: mailerForm.name.value,
+      company: mailerForm.company.value,
+      phone: mailerForm.phone.value,
+      email: mailerForm.email.value
+    };
+
+    try {
+      const res = await fetch('https://tempo-form-backend.onrender.com/mailer-inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        mailerStatus.textContent = 'Thanks! Your info was sent successfully.';
+        mailerStatus.className = 'form-status success';
+        mailerStatus.style.display = 'block';
+        mailerForm.reset();
+      } else {
+        mailerStatus.textContent = 'Oops! Something went wrong. Please try again later.';
+        mailerStatus.className = 'form-status error';
+        mailerStatus.style.display = 'block';
+      }
+    } catch (err) {
+      console.error(err);
+      mailerStatus.textContent = 'Server error. Please try again later.';
+      mailerStatus.className = 'form-status error';
+      mailerStatus.style.display = 'block';
+    }
+  });
+</script>
+
