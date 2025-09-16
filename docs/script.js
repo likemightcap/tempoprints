@@ -1,0 +1,41 @@
+
+// Community Mailer Form Handler
+document.addEventListener('DOMContentLoaded', function () {
+	const mailerForm = document.getElementById('mailer-form');
+	const mailerStatus = document.getElementById('mailerStatus');
+	if (mailerForm && mailerStatus) {
+		mailerForm.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const formData = {
+				name: mailerForm.name.value,
+				company: mailerForm.company.value,
+				phone: mailerForm.phone.value,
+				email: mailerForm.email.value
+			};
+			try {
+				const res = await fetch('https://tempo-form-backend.onrender.com/mailer-inquiry', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify(formData)
+				});
+				if (res.ok) {
+					mailerStatus.textContent = 'Thanks! Your info was sent successfully.';
+					mailerStatus.className = 'form-status success';
+					mailerStatus.style.display = 'block';
+					mailerForm.reset();
+				} else {
+					mailerStatus.textContent = 'Oops! Something went wrong. Please try again later.';
+					mailerStatus.className = 'form-status error';
+					mailerStatus.style.display = 'block';
+				}
+			} catch (err) {
+				console.error(err);
+				mailerStatus.textContent = 'Server error. Please try again later.';
+				mailerStatus.className = 'form-status error';
+				mailerStatus.style.display = 'block';
+			}
+		});
+	}
+});

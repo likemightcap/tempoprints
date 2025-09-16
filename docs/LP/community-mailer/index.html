@@ -54,28 +54,25 @@
   </div>
 </section>
 
-<section class="newsletter-banner thin white">
+
+<section class="contact-form-section">
   <div class="container">
-    <div class="newsletter-image">
-      <img src="/assets/images/Growth-Blueprint-Dark.png" alt="Newsletter Image">
-    </div>
-    <div class="newsletter-text">
-      <h2>Get Featured in Our Next Mailer</h2>
-      <p>Reach thousands of local homes and businesses with a professionally designed, high-impact mailer. Perfect for service businesses, restaurants, and local shops.</p>
-      <form class="newsletter-form" id="mailerForm">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <input type="text" name="business" placeholder="Business Name" required />
-        </div>
-        <button type="submit">Request Info</button>
-      </form>
-      <div id="mailerStatus" class="form-status" style="display: none;"></div>
-    </div>
+    <form class="contact-form" id="mailer-form">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="mailerStatus" class="form-status" style="display: none;"></div>
   </div>
 </section>
 
