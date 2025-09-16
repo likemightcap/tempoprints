@@ -1,0 +1,27 @@
+{
+  "name": "tempoprints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "._script.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rimraf docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likemightcap/tempoprints.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/likemightcap/tempoprints/issues"
+  },
+  "homepage": "https://github.com/likemightcap/tempoprints#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

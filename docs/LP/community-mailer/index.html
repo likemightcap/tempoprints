@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Mailer</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body id="home">
+
+  <header>
+  <nav>
+    <div class="nav-container">
+      <a href="/#home" class="logo">
+        <img src="/assets/images/Tempo-Icon-White2.png" alt="TempoPrints Logo" class="logo-img" />
+      </a>
+      <div id="hamburger" class="hamburger">☰</div>
+      <ul class="nav-menu">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact-form">Contact</a></li>
+      </ul>
+      <div class="nav-contact">
+        <a href="mailto:mike@tempoprints.com">
+          <img class="nav-contact-icon" src="/assets/icons/Email-Icon.png" alt="Email">
+        </a>
+        <a href="tel:8562520414">
+          <img class="nav-contact-icon" src="/assets/icons/Phone-Icon.png" alt="Phone">
+        </a>
+      </div>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact-form">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Page content goes here -->
+  
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="/assets/images/Tempo-Logo-Dark.png" alt="TempoPrints Logo" class="hero-logo">
+    <h1>Community Mailer</h1>
+    <p>Grow your local business with our targeted community mailer program!</p>
+  </div>
+</section>
+
+<section class="newsletter-banner thin white">
+  <div class="container">
+    <div class="newsletter-image">
+      <img src="/assets/images/Growth-Blueprint-Dark.png" alt="Newsletter Image">
+    </div>
+    <div class="newsletter-text">
+      <h2>Get Featured in Our Next Mailer</h2>
+      <p>Reach thousands of local homes and businesses with a professionally designed, high-impact mailer. Perfect for service businesses, restaurants, and local shops.</p>
+      <form class="newsletter-form" id="mailerForm">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <input type="text" name="business" placeholder="Business Name" required />
+        </div>
+        <button type="submit">Request Info</button>
+      </form>
+      <div id="mailerStatus" class="form-status" style="display: none;"></div>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 TempoPrints. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
