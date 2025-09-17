@@ -1,3 +1,19 @@
+// Responsive Nav Hamburger Toggle
+document.addEventListener('DOMContentLoaded', function () {
+	var hamburger = document.getElementById('hamburger');
+	var mobileMenu = document.getElementById('mobileMenu');
+	if (hamburger && mobileMenu) {
+		hamburger.addEventListener('click', function () {
+			mobileMenu.classList.toggle('active');
+		});
+		// Optional: close menu when clicking a link
+		mobileMenu.querySelectorAll('a').forEach(function(link) {
+			link.addEventListener('click', function () {
+				mobileMenu.classList.remove('active');
+			});
+		});
+	}
+});
 
 // Newsletter form handler
 document.addEventListener('DOMContentLoaded', function () {
