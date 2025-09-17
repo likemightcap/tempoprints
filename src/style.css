@@ -238,7 +238,7 @@ nav {
 }
 
 .mailer-services-title {
-	text-align: center;
+	text-align: center; /* ensure centered */
 	font-size: 2rem;
 	margin-bottom: 24px;
 	color: #0b2127;
@@ -270,6 +270,15 @@ nav {
 	margin-top: 10px;
 }
 
+/* enforce text color for all elements inside the mailer section */
+.mailer-services,
+.mailer-services h2,
+.mailer-services h3,
+.mailer-services p,
+.mailer-services .service-card {
+	color: #0b2127 !important;
+}
+
 .mailer-grid .service-img-wrap {
 	width: 100%;
 	aspect-ratio: 16/9;
@@ -293,6 +302,83 @@ nav {
 @media (max-width: 600px) {
 	.mailer-grid { grid-template-columns: 1fr; }
 }
+
+/* Why Local Businesses Love It */
+.why-local {
+	position: relative;
+	padding: 60px 0;
+	background: url('assets/images/Tempo-Hero.jpg') center/cover no-repeat;
+	color: #ffffff;
+}
+
+.why-local::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45); /* subtle overlay for readability */
+	pointer-events: none;
+}
+
+.why-local .container {
+	position: relative;
+	z-index: 1;
+}
+
+.why-local-title {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 28px;
+	color: #ffffff;
+}
+
+.why-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* two columns of items */
+	gap: 18px 36px;
+}
+
+.why-item {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+	padding: 12px 0;
+}
+
+.why-img {
+	flex: 0 0 84px; /* smaller image on left */
+	width: 84px;
+	height: 84px;
+	overflow: hidden;
+	border-radius: 6px;
+	background: rgba(255,255,255,0.06);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.why-img img {
+	width: 72px;
+	height: 72px;
+	object-fit: cover;
+	display: block;
+}
+
+.why-text h3 {
+	margin: 0 0 6px 0;
+	font-size: 1.05rem;
+	color: #ffffff;
+}
+
+.why-text p {
+	margin: 0;
+	color: #ffffff;
+	font-size: 0.98rem;
+}
+
+@media (max-width: 900px) {
+	.why-grid { grid-template-columns: 1fr; }
+}
+
 
 
 /* Newsletter Banner — REPLACEMENT */
