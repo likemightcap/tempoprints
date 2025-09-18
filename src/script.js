@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			e.preventDefault();
 			const data = {
 				name: newsletterForm.name.value,
-				email: newsletterForm.email.value
+				email: newsletterForm.email.value,
+				file: '/assets/6-Step-Local-Growth-Blueprint.pdf' // requested file to deliver
 			};
 			try {
 				const res = await fetch('https://tempo-form-backend.onrender.com/newsletter', {
