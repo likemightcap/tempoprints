@@ -176,6 +176,49 @@ nav {
 	margin-bottom: 30px;
 }
 
+/* Responsive hero tweaks for small screens */
+@media (max-width: 768px) {
+	.hero {
+		height: auto; /* allow the hero to grow with content */
+		padding: 60px 20px;
+		margin-top: 70px;
+	}
+
+	.hero-content {
+		max-width: 92%;
+		padding: 10px;
+	}
+
+	.hero-logo {
+		max-width: 320px;
+		height: auto;
+		margin-bottom: 8px;
+	}
+
+	.hero h1 {
+		font-size: 1.4rem; /* smaller on mobile */
+		line-height: 1.15;
+		margin-bottom: 8px;
+		word-break: break-word;
+		white-space: normal;
+	}
+
+	.hero p {
+		font-size: 0.95rem;
+		margin-bottom: 18px;
+	}
+}
+
+@media (max-width: 420px) {
+	.hero h1 {
+		font-size: 1.2rem;
+	}
+
+	.hero p {
+		font-size: 0.9rem;
+	}
+}
+
 .services {
 	position: relative;
 	background: url('assets/images/Tempo-Hero.jpg') center/cover no-repeat;
