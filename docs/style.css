@@ -743,6 +743,15 @@ footer {
 	margin-top: 8px;
 	color: #ffffff;
 	font-weight: 500;
+	text-align: center;
+}
+
+/* center brand column contents */
+.footer-brand {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 @media (max-width: 900px) {
