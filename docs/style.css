@@ -689,3 +689,73 @@ footer {
 	text-align: center;
 	font-size: 0.9rem;
 }
+
+/* Footer expanded layout */
+.footer-grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 24px;
+	align-items: start;
+	padding: 28px 0;
+}
+
+.footer-column {
+	color: #ffffff;
+}
+
+.footer-logo {
+	max-width: 140px;
+	display: block;
+	margin-bottom: 12px;
+}
+
+.footer-contact a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	margin-bottom: 6px;
+}
+
+.footer-areas h4 {
+	margin: 0 0 8px 0;
+}
+
+.areas-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	text-align: left;
+}
+
+.areas-grid strong {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.footer-bottom {
+	border-top: 1px solid rgba(255,255,255,0.06);
+	margin-top: 18px;
+	padding-top: 12px;
+}
+
+/* Service area paragraph under Services */
+.service-area {
+	margin-top: 8px;
+	color: #ffffff;
+	font-weight: 500;
+}
+
+@media (max-width: 900px) {
+	.footer-grid {
+		grid-template-columns: 1fr;
+	}
+	.areas-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 420px) {
+	.areas-grid {
+		grid-template-columns: 1fr;
+	}
+}

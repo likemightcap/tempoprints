@@ -12,6 +12,37 @@
 
   <link rel="stylesheet" href="/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tempo Print & Design",
+    "telephone": "856-252-0414",
+    "areaServed": [
+      "New Jersey",
+      "Burlington County",
+      "Camden County",
+      "Gloucester County",
+      "Palmyra",
+      "Cinnaminson",
+      "Moorestown",
+      "Cherry Hill",
+      "Mount Laurel",
+      "Mount Holly",
+      "Pennsauken",
+      "Voorhees",
+      "Marlton",
+      "Evesham",
+      "Gloucester Township",
+      "Collingswood",
+      "Haddonfield",
+      "Haddon Heights",
+      "Glassboro",
+      "Woodbury",
+      "Deptford"
+    ]
+  }
+  </script>
 </head>
 <body id="home">
 
@@ -21,7 +52,35 @@
   {{ content | safe }}
 
   <footer>
-    <div class="container">
+    <div class="container footer-grid">
+      <div class="footer-column footer-brand">
+        <img src="/assets/images/Tempo-Logo-White.png" alt="TempoPrints" class="footer-logo">
+        <div class="footer-contact">
+          <a href="tel:8562520414">856-252-0414</a>
+          <a href="mailto:mike@tempoprints.com">mike@tempoprints.com</a>
+        </div>
+      </div>
+
+      <div class="footer-column footer-areas">
+        <h4>Areas Served</h4>
+        <div class="areas-grid">
+          <div>
+            <strong>New Jersey</strong>
+            <p>Burlington County<br>Moorestown<br>Mount Laurel<br>Mount Holly</p>
+          </div>
+          <div>
+            <strong>Camden County</strong>
+            <p>Cherry Hill<br>Pennsauken<br>Voorhees<br>Marlton</p>
+          </div>
+          <div>
+            <strong>Gloucester County</strong>
+            <p>Deptford<br>Woodbury<br>Glassboro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
       <p>&copy; 2025 TempoPrints. All rights reserved.</p>
     </div>
   </footer>
